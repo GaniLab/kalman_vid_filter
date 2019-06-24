@@ -68,6 +68,7 @@ int main(int argc, char **argv)
 
 		waitKey(10);
 
+		// copy the frame
 		frame_1 = frame_2.clone();
 		frame2.copyTo(frame1);
 
