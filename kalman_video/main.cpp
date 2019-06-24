@@ -25,7 +25,7 @@ using namespace cv;
 int main(int argc, char **argv)
 {
 
-	// create object for kalman class for filtering purpose
+	// create object for kalman class for refining video with kalman filter
 	Kalman refining;
 
 	// create object for capturing video with camera choice initialized at 0 (default camera)
@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 	Mat frame_1, frame1;
 
 	captureVideo >> frame_1;
+
 	cvtColor(frame_1, frame1, COLOR_BGR2GRAY);
 
 	int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');
